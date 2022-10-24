@@ -1,0 +1,33 @@
+/*
+  Copyright (C) 2019-2020 Dimitar Toshkov Zhekov <dimitar.zhekov@gmail.com>
+
+  This program is free software; you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by the Free
+  Software Foundation; either version 2 of the License, or (at your option)
+  any later version.
+
+  This program is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+  or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+  for more details.
+
+  You should have received a copy of the GNU General Public License along
+  with this program; if not, write to the Free Software Foundation, Inc.,
+  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+#define IDD_SETINGS 105
+#define IDC_SETTINGS_HEADER_RECT 1036
+#define IDC_SETTINGS_HEADER_TITLE 1037
+#define IDC_SETTINGS_HEADER_SUBTITLE 1038
+#define IDC_SETTINGS_HEADER_IMAGE 1039
+#define IDC_SETTINGS_LABEL_FIRST 100
+#define IDC_SETTINGS_LABEL_LAST 107
+#define IDC_SETTINGS_COMBO_FIRST 110
+#define IDC_SETTINGS_COMBO_LAST 117
+#define IDC_SETTINGS_WRONG_FIRST 120
+#define IDC_SETTINGS_WRONG_LAST 127
+#define IDC_SETTINGS_INDICATOR_LABEL 130
+#define IDC_SETTINGS_INDICATOR_LIST 131
+#define IDC_SETTINGS_CLEAR 140
+#define IDC_SETTINGS_BACK 141

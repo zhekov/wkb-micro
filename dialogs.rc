@@ -1,0 +1,73 @@
+/*
+  Copyright (C) 2019-2020 Dimitar Toshkov Zhekov <dimitar.zhekov@gmail.com>
+
+  This program is free software; you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by the Free
+  Software Foundation; either version 2 of the License, or (at your option)
+  any later version.
+
+  This program is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+  or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+  for more details.
+
+  You should have received a copy of the GNU General Public License along
+  with this program; if not, write to the Free Software Foundation, Inc.,
+  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+#ifndef WORKSHOP_INVOKED
+#define WINVER 0x0601
+#define _WIN32_WINNT 0x0601
+#include <winuser.rh>
+#endif
+
+#include "charmap.rh"
+#include "dialogs.rh"
+
+LANGUAGE 0x09, 0x01
+
+
+IDD_SETINGS DIALOGEX 0, 0, 332, 222
+STYLE DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX
+CAPTION "WKB Layout"
+FONT 8, "MS Shell Dlg"
+{
+ CONTROL "", IDC_SETTINGS_HEADER_RECT, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 0, 0, 332, 36
+ CONTROL IDI_CHARMAP, IDC_SETTINGS_HEADER_IMAGE, "static", SS_ICON | WS_CHILD | WS_VISIBLE, 300, 8, 20, 20
+ CONTROL "", IDC_SETTINGS_HEADER_TITLE, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 8, 4, 280, 12
+ CONTROL "", IDC_SETTINGS_HEADER_SUBTITLE, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 16, 16, 276, 16
+ CONTROL "", -1, "static", SS_ETCHEDHORZ | WS_CHILD | WS_VISIBLE, 0, 36, 340, 1
+ CONTROL "", 1018, "static", SS_BLACKRECT | WS_CHILD | NOT WS_VISIBLE, 16, 44, 300, 140
+ CONTROL "Right Control", 100, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 16, 46, 60, 8
+ CONTROL "", 110, "combobox", CBS_DROPDOWNLIST | CBS_DISABLENOSCROLL | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_GROUP | WS_TABSTOP, 76, 44, 240, 100
+ CONTROL "&?", 120, "static", SS_CENTER | SS_NOTIFY | WS_CHILD | NOT WS_VISIBLE, 316, 45, 10, 10
+ CONTROL "Right Alt", 101, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 16, 62, 60, 8
+ CONTROL "", 111, "combobox", CBS_DROPDOWNLIST | CBS_DISABLENOSCROLL | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP, 76, 60, 240, 100
+ CONTROL "&?", 121, "static", SS_CENTER | SS_NOTIFY | WS_CHILD | NOT WS_VISIBLE, 316, 61, 10, 10
+ CONTROL "Right Windows", 102, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 16, 78, 60, 8
+ CONTROL "", 112, "combobox", CBS_DROPDOWNLIST | CBS_DISABLENOSCROLL | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP, 76, 76, 240, 12
+ CONTROL "&?", 122, "static", SS_CENTER | SS_NOTIFY | WS_CHILD | NOT WS_VISIBLE, 316, 77, 10, 10
+ CONTROL "Right Shift", 103, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 16, 94, 60, 8
+ CONTROL "", 113, "combobox", CBS_DROPDOWNLIST | CBS_DISABLENOSCROLL | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP, 76, 92, 240, 100
+ CONTROL "&?", 123, "static", SS_CENTER | SS_NOTIFY | WS_CHILD | NOT WS_VISIBLE, 316, 93, 10, 10
+ CONTROL "Left Control", 104, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 16, 110, 60, 8
+ CONTROL "", 114, "combobox", CBS_DROPDOWNLIST | CBS_DISABLENOSCROLL | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP, 76, 108, 240, 100
+ CONTROL "&?", 124, "static", SS_CENTER | SS_NOTIFY | WS_CHILD | NOT WS_VISIBLE, 316, 111, 10, 10
+ CONTROL "Left Alt", 105, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 16, 126, 60, 8
+ CONTROL "", 115, "combobox", CBS_DROPDOWNLIST | CBS_DISABLENOSCROLL | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP, 76, 124, 240, 100
+ CONTROL "&?", 125, "static", SS_CENTER | SS_NOTIFY | WS_CHILD | NOT WS_VISIBLE, 316, 127, 10, 10
+ CONTROL "Left Windows", 106, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 16, 142, 60, 8
+ CONTROL "", 116, "combobox", CBS_DROPDOWNLIST | CBS_DISABLENOSCROLL | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP, 76, 140, 240, 100
+ CONTROL "&?", 126, "static", SS_CENTER | SS_NOTIFY | WS_CHILD | NOT WS_VISIBLE, 316, 141, 10, 10
+ CONTROL "Left Shift", 107, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 16, 158, 60, 8
+ CONTROL "", 117, "combobox", CBS_DROPDOWNLIST | CBS_DISABLENOSCROLL | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP, 76, 156, 240, 100
+ CONTROL "&?", 127, "static", SS_CENTER | SS_NOTIFY | WS_CHILD | NOT WS_VISIBLE, 316, 157, 10, 10
+ CONTROL "Turn the Scroll Lock light ON for the following keyboards:", IDC_SETTINGS_INDICATOR_LABEL, "static", SS_LEFT | WS_CHILD | NOT WS_VISIBLE, 16, 44, 200, 8
+ CONTROL "", IDC_SETTINGS_INDICATOR_LIST, "listbox", LBS_NOTIFY | LBS_MULTIPLESEL | WS_CHILD | NOT WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_TABSTOP, 16, 52, 300, 136
+ CONTROL "Clear", IDC_SETTINGS_CLEAR, "button", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 8, 200, 52, 14
+ CONTROL "< &Back", IDC_SETTINGS_BACK, "button", BS_PUSHBUTTON | WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP, 164, 200, 52, 14
+ CONTROL "OK", IDOK, "button", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 216, 200, 52, 14
+ CONTROL "Cancel", IDCANCEL, "button", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 272, 200, 52, 14
+ CONTROL "", -1, "static", SS_ETCHEDHORZ | WS_CHILD | WS_VISIBLE | WS_GROUP, 0, 192, 340, 1
+}

@@ -1,0 +1,50 @@
+/*
+  Copyright (C) 2016-2022 Dimitar Toshkov Zhekov <dimitar.zhekov@gmail.com>
+
+  This program is free software; you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by the Free
+  Software Foundation; either version 3 of the License, or (at your option)
+  any later version.
+
+  This program is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+  or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+  for more details.
+
+  You should have received a copy of the GNU General Public License along
+  with this program; if not, write to the Free Software Foundation, Inc.,
+  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+#include <winuser.rh>
+#include <winver.h>
+
+#include "charmap.rh"
+
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "manifest.xml"
+IDI_CHARMAP ICON "gucharmap1.ico"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 2, 0, 2, 0
+PRODUCTVERSION 2, 0, 2, 0
+FILEOS VOS_NT_WINDOWS32
+FILETYPE VFT_APP
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "FileDescription", "WKB Layout Executable\0"
+      VALUE "InternalName", "wkb-micro\0"
+      VALUE "FileVersion", "2.02\0"
+      VALUE "LegalCopyright", "Copyright (C) 2016-2022 Dimitar Toshkov Zhekov\0"
+      VALUE "OriginalFilename", "wkb-micro.exe\0"
+      VALUE "ProductName", "WKB Layout\0"
+      VALUE "ProductVersion", "2.02\0"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x409, 1252
+  END
+END

@@ -1,0 +1,46 @@
+: new project on github
+
+? settings key combination
+	? Left_Windows + Left_Shift+K
+	? or use tray icon instead
+	? or use keyboard layout window
+
+? cancel change on too many keypresses
+
+? install directory / MUI_PAGE_DIRECTORY
+	; InstallDirRegKey: HKLM64 not supported
+	; does not warn on install in different directory
+
+--
+
+Hide file/directory Local Menu actions:
+
+HKCR\Class\shell\Action:
+	ProgrammaticAccessOnly = "" | "Apartment"
+
+HKCR\Class\ShellEx\Action:
+	HKCU\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked
+		{GUID} = ""
+
+--
+
+; NSIS 3 has ManifestDPIAware
+	3.02 - HKLM64, ExecShellWait
+	3.03 - more NSD controls/macros
+	3.04 - MUI_TEXTCOLOR, NTMARTA
+	3.05...3.08 - nothing important
+
+? track scroll by EVENT_SYSTEM_FOREGROUND and WM_INPUTLANGCHANGE
+	; allow Scroll Lock on laptops
+	; or allow keyboard layout window
+
+--
+
+; check A/W on virustoral
+	; A 3.4 .exe 159K, 62K, 39K: VT 4/65, UCRT
+	; W 3.4 .exe 163K, 65K, 39K: VT 2/68, UCRT => 4/68 with StringCchVPrintfW
+	; L 3.4 .exe 162K, 61K, 38K: VT 1/68, UCRT
+	; L 3.4 .exe 162K, 60K, 38K: VT 1/64, MSVC
+	; L 3.4 .exe 145K, 59K, NAK: VT 1/70, MSVC
+
+? owned-draw with frame
