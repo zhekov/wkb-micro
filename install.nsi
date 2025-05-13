@@ -69,7 +69,7 @@ Function customPageCreate
 		unless it$\'s also started as administrator, for example by the installer.'
 
 	${NSD_CreateLabel} 0 24u 100% 24u 'Any assigned keys may still be used in combinations, such as \
-		Ctrl+C, Alt-Click etc. They may work as standalone keys in some games as well.'
+		Ctrl+C, Alt-Click etc. They will work as standalone keys in some games as well.'
 
 	${NSD_CreateLabel} 0 48u 100% 24u 'After adding or removing a keyboard from Windows Settings or \
 		Control Panel, you will need to restart WKB Layout, or invoke and confirm WKB Settings.'

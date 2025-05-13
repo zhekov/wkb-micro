@@ -7,7 +7,7 @@ WKB Layout 2.02 README file
 WKB Layout is a simple keyboard layout switcher for Windows. The modifier
 keys (left/right Control, Alt, Shift and Windows) may be used to select the
 next, previous, or a specific keyboard layout. Any assigned keys may still
-be used in combinations, such as Ctrl+C, Alt-Click etc. They may work as
+be used in combinations, such as Ctrl+C, Alt-Click etc. They will work as
 standalone keys in some games as well.
 
 After adding or removing a keyboard from Windows Settings or Control Panel,
@@ -16,10 +16,10 @@ you will need to restart WKB Layout, or invoke and confirm WKB Settings.
 
 2. Antivirus warnings.
 ----------------------
-As of today (2022-08-23), 1 out of 71 virustotal antivirus engines flags
-the WKB Layout installer as "malicious". It seems to flag flag any program
-packaged with NSIS. If you are unsure, get the source code and compile it
-yourself (see p.4 below), or ask somebody to do so.
+As of today (2022-11-21), 1 out of 72 virustotal antivirus engines flags
+the WKB Layout installer as "malicious". This is a common occurense for
+software packaged with NSIS. If you have suspicions, get the source code
+and compile it yourself (see p.4 below), or ask somebody to do so.
 
 
 3. User accounts.
@@ -88,7 +88,7 @@ for each desktop.
 
 2.00: Rewritten and simplified. Windows 7+ 64-bit only. Modifier keys only.
 2.01: Shift-Change layout replaced with exact layout keys. GPL3+ license.
-2.02: Use IMM/thread windows. 64-bit only C code (compileable as 32-bit).
+2.02: Use IMM/thread windows. 64-bit only C code (compilable as 32-bit).
 
 
 8. Legal information.
